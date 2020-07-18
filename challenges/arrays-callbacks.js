@@ -21,15 +21,29 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+function funcDisplay (array, cb) {
+  cb(`${array.animal_name},${array.scientific_name}`);
+}
+funcDisplay(zooAnimals,displayNames) {
+  displayNames(`${zooAnimals.animal_name}, ${zooAnimals.scientific_name}`);
+}
+
+const nameOfAnimals = zooAnimals.map((element) => {
+  return { `${element.animal_name}, ${element.scientific_name} ` }
+})
+
 console.log(displayNames);
 
 /* Request 2: .map()
+
+
+
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
 
-const lowCaseAnimalNames
+const lowCaseAnimalNames = 
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
