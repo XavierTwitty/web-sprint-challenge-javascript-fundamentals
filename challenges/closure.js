@@ -16,18 +16,24 @@ function myFunction() {
 myFunction();
 
 // Explanation:
-// const external is in memory and can be used insde the function.
-// variable interanl is in nestedFunction scope
+// nested function is in my functions scope
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
 
 function summation(number) {
-  for (let sum = 1; i <= number; i++) {
-    sum += number;
-  }
-  return sum;
+  let x = 0;
+  return function count() {
+    for (let i = 0; i < number.length; i++) {
+      x++ + number;
+    }
+    return number;
+  };
 }
 
-console.log(summation(4));
+// console.log(summation());
+
+const counter = summation(4);
+
+console.log(counter());
