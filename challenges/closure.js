@@ -24,16 +24,17 @@ myFunction();
 
 function summation(number) {
   let x = 0;
-  return function count() {
-    for (let i = 0; i < number.length; i++) {
-      x++ + number;
+
+  function count() {
+    for (let i = 0; i <= number; i++) {
+      x = x + i;
     }
-    return number;
-  };
+    return x;
+  }
+  count();
+  return x;
 }
 
 // console.log(summation());
 
-const counter = summation(4);
-
-console.log(counter());
+console.log(summation(4));
